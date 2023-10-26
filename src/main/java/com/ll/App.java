@@ -1,12 +1,15 @@
 package com.ll;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class App {
     void run() {
         System.out.println("== 명언 앱 ==");
 
+        ArrayList<Quotation> quotations = new ArrayList<>();
         int lastQuotationId = 0;
+
         while (true) {
             System.out.print("명언) ");
 
@@ -22,9 +25,21 @@ class App {
                 System.out.print("작가 : ");
                 String author = sc.nextLine();
 
-                lastQuotationId++;
+                lastQuotationId++; // 명언 번호 증가
+                int id = lastQuotationId;
+
+                Quotation quotation = new Quotation(id, content, author); // 명언 객체 생성
+
+                quotations.add(quotation); // 명언 list에 추가
 
                 System.out.printf("%d번 명언이 등록되었습니다.\n",  lastQuotationId);
+            } else if (cmd.equals("목록")) {
+                System.out.println("번호 / 작가 / 명언");
+                System.out.println("------------------");
+
+                for(Quotation quotation : quotations) {
+                    System.out.printf("%d / %s / %s\n", quotation.id, quotation.author, quotation.content);
+                }
             }
         }
     }
