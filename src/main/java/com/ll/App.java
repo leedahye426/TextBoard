@@ -40,7 +40,16 @@ class App {
                 for(Quotation quotation : quotations) {
                     System.out.printf("%d / %s / %s\n", quotation.id, quotation.author, quotation.content);
                 }
+            } else if (cmd.startsWith("삭제?id=")) {
+                int deleteId = Integer.parseInt(cmd.substring(6)); // cmd에서
+                for(Quotation quotation : quotations) {
+                    if(quotation.id == deleteId) {
+                        quotations.remove(quotation);
+                    }
+                }
+                System.out.printf("%d번 명언이 삭제되었습니다.\n", deleteId);
             }
+
         }
     }
 }
