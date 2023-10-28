@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2d2bc38a-e674-496b-a196-c546c90712aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/Rq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/Rq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/domain/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/Quotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/domain/Quotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/Rq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/domain/Rq.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +112,7 @@
       <workItem from="1698218402040" duration="192000" />
       <workItem from="1698218696645" duration="1012000" />
       <workItem from="1698279526417" duration="15063000" />
-      <workItem from="1698507226160" duration="4382000" />
+      <workItem from="1698507226160" duration="6999000" />
     </task>
     <servers />
   </component>
@@ -134,7 +136,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/ll/Main.java</url>
           <line>3</line>
-          <properties class="com.ll.Main" method="main">
+          <properties class="com.ll.domain.Main" method="main">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

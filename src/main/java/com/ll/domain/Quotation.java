@@ -1,9 +1,9 @@
-package com.ll;
+package com.ll.domain;
 
 public class Quotation {
-    int id;
-    String content;
-    String author;
+    public int id;
+    public String content;
+    public String author;
 
     public Quotation(int id, String content, String author) {
         this.id = id;

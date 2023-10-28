@@ -1,4 +1,6 @@
-package com.ll;
+package com.ll.domain;
+
+import com.ll.standard.util.Ut;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,13 +8,13 @@ import java.util.List;
 import java.util.Map;
 
 public class Rq {
-    String cmd;
-    String queryString;
-    String action;
+    private String cmd;
+    private String queryString;
+    private String action;
 
-    Map<String, String> paramsMap;
+    private Map<String, String> paramsMap;
 
-    Rq(String cmd) {
+    public Rq(String cmd) {
         //삭제?id=23&age=55
         paramsMap = new HashMap<>();
 
@@ -41,18 +43,11 @@ public class Rq {
         }
     }
 
-    String getAction() {
+    public String getAction() {
         return action;
     }
 
-    int getParamAsInt(String paramName, int defaultValue) {
-        String paramValue = paramsMap.get(paramName);
-
-        if(paramValue != null) {
-            try {
-                return Integer.parseInt(paramValue);
-            } catch (NumberFormatException e) { }
-        }
-        return defaultValue;
+    public int getParamAsInt(String paramName, int defaultValue) {
+        return Ut.str.parseInt(paramsMap.get(paramName), defaultValue);
     }
 }
