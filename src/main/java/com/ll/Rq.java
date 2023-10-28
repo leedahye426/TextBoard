@@ -10,19 +10,23 @@ public class Rq {
     String queryString;
     String action;
 
-    List<String> paramNames;
-    List<String> paramValues;
+    Map<String, String> paramsMap;
 
     Rq(String cmd) {
         //삭제?id=23&age=55
-        paramNames = new ArrayList<>();
-        paramValues = new ArrayList<>();
+        paramsMap = new HashMap<>();
 
         this.cmd = cmd;
 
         String[] cmdBits = cmd.split("\\?", 2);
         action = cmdBits[0].trim(); //삭제
+
+        if(cmdBits.length == 1) {
+            return;
+        }
+
         queryString = cmdBits[1].trim(); //id=23&age=55
+
 
         String[] queryStringBits = queryString.split("&"); //["id=23","age=55"]
 
@@ -33,30 +37,22 @@ public class Rq {
             String paramName = queryParamStrBits[0]; //id
             String paramValue = queryParamStrBits[1]; //22
 
-            paramNames.add(paramName);
-            paramValues.add(paramValue);
-
+            paramsMap.put(paramName, paramValue);
         }
-
-
     }
 
     String getAction() {
         return action;
     }
 
-
     int getParamAsInt(String paramName, int defaultValue) {
-        int index = paramNames.indexOf(paramName);
+        String paramValue = paramsMap.get(paramName);
 
-        if (index == -1) return defaultValue;
-
-        String paramValue = paramValues.get(index);
-
-        try {
-            return Integer.parseInt(paramValue);
-        } catch (NumberFormatException e) {
-            return defaultValue;
+        if(paramValue != null) {
+            try {
+                return Integer.parseInt(paramValue);
+            } catch (NumberFormatException e) { }
         }
+        return defaultValue;
     }
 }

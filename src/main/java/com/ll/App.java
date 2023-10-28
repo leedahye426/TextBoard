@@ -94,5 +94,5 @@ public class App {
 
         System.out.printf("%d번 명언을 수정합니다.\n", id);
     }
-    
+
 }
