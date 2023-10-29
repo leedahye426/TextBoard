@@ -1,6 +1,7 @@
 package com.ll.domain;
 
 import com.ll.standard.util.Ut;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,6 +11,7 @@ import java.util.Map;
 public class Rq {
     private String cmd;
     private String queryString;
+    @Getter
     private String action;
 
     private Map<String, String> paramsMap;
@@ -43,9 +45,6 @@ public class Rq {
         }
     }
 
-    public String getAction() {
-        return action;
-    }
 
     public int getParamAsInt(String paramName, int defaultValue) {
         return Ut.str.parseInt(paramsMap.get(paramName), defaultValue);

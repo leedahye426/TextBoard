@@ -70,7 +70,7 @@ public class App {
 
         for (int i = quotations.size() - 1; i >= 0; i--) {
             Quotation quotation = quotations.get(i);
-            System.out.printf("%d / %s / %s\n", quotation.id, quotation.author, quotation.content);
+            System.out.printf("%d / %s / %s\n", quotation.getId(), quotation.getAuthor(), quotation.getContent());
         }
     }
 
@@ -96,7 +96,7 @@ public class App {
         for(int i = 0; i < quotations.size(); i++) {
             Quotation quotation = quotations.get(i);
 
-            if(quotation.id == id) {
+            if(quotation.getId() == id) {
                 return i;
             }
         }
@@ -110,6 +110,25 @@ public class App {
             System.out.println("id를 정확히 입력해주세요.");
             return; // 함수를 끝낸다.
         }
+
+        int index = findQuotationIndexById(id);
+
+        if(index == -1) {
+            System.out.printf("%d번 명언은 존재하지 않습니다.");
+            return;
+        }
+        Quotation quotation = quotations.get(index);
+
+        System.out.printf("명언(기존) : %s\n", quotation.getContent());
+        System.out.print("명언 : ");
+        String content = scanner.nextLine();
+
+        System.out.printf("작가(기존) : %s\n", quotation.getAuthor());
+        System.out.print("작가 : ");
+        String author = scanner.nextLine();
+
+        quotation.setContent(content);
+        quotation.setAuthor(author);
 
         System.out.printf("%d번 명언을 수정합니다.\n", id);
     }

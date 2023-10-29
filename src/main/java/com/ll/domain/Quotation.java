@@ -1,13 +1,15 @@
 package com.ll.domain;
 
-public class Quotation {
-    public int id;
-    public String content;
-    public String author;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-    public Quotation(int id, String content, String author) {
-        this.id = id;
-        this.content = content;
-        this.author = author;
-    }
+@AllArgsConstructor
+public class Quotation {
+    @Getter
+    private int id;
+    @Getter @Setter
+    private String content;
+    @Getter @Setter
+    private String author;
 }
