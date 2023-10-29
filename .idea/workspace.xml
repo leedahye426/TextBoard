@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d2bc38a-e674-496b-a196-c546c90712aa" name="Changes" comment="" />
+    <list default="true" id="2d2bc38a-e674-496b-a196-c546c90712aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/domain/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/base/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/domain/Quotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/domain/quotation/Quotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ll/domain/Rq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ll/base/Rq.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +56,6 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -106,7 +111,7 @@
       <workItem from="1698218402040" duration="192000" />
       <workItem from="1698218696645" duration="1012000" />
       <workItem from="1698279526417" duration="15063000" />
-      <workItem from="1698507226160" duration="11298000" />
+      <workItem from="1698507226160" duration="12557000" />
     </task>
     <servers />
   </component>
